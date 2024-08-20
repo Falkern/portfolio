@@ -1,9 +1,11 @@
 function toggleMenu() {
-    const menu = document.querySelector(".menu-links");
-    const icon = document.querySelector(".hamburger-icon");
-    menu.classList.toggle("open");
-    icon.classList.toggle("open");
+  const menu = document.querySelector(".menu-links");
+  const icon = document.querySelector(".hamburger-icon");
+  const isOpen = menu.classList.toggle("open");
+  icon.classList.toggle("open");
+  icon.setAttribute("aria-expanded", isOpen);
 }
+
 
 const elements = document.querySelectorAll('.section__text__p1, .title, .section__text__p2, .about-pic, .details-container, .about-me-text');
 
