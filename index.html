@@ -98,6 +98,52 @@
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
+                <li>
+                  <img id="music-toggle-btn" src="./assets/music.png" alt="Toggle Music" class="music-icon">
+                </li>
+              </ul>
+            </nav>
+          
+            <audio id="background-music" preload="auto" loop>
+              <source src="./assets/kaze.mp3" type="audio/mpeg">
+              Your browser does not support the audio element.
+            </audio>
+
+            <script>
+              document.addEventListener('DOMContentLoaded', function() {
+                var music = document.getElementById('background-music');
+                var musicToggleBtn = document.getElementById('music-toggle-btn');
+                var isMusicPlaying = false;
+                var music = document.getElementById('background-music');
+                music.volume = 0.05;
+            
+                function playMusic() {
+                  music.currentTime = 0; 
+                  music.play().then(() => {
+                    isMusicPlaying = true;
+                    musicToggleBtn.src = './assets/pause.png'; 
+                  }).catch(function(error) {
+                    console.log('Autoplay was prevented or failed:', error);
+                  });
+                }
+            
+                function toggleMusic() {
+                  if (isMusicPlaying) {
+                    music.pause();
+                    musicToggleBtn.src = './assets/music.png';
+                  } else {
+                    playMusic();
+                  }
+                  isMusicPlaying = !isMusicPlaying;
+                }
+            
+                musicToggleBtn.addEventListener('click', toggleMusic);
+            
+                playMusic();
+              });
+            </script>
+            
+            
             </ul>
         </div>
     </nav>
@@ -371,6 +417,7 @@
     </nav>
     <p>Copyright &#169; 2024 FALKERN. All Rights Reserved.</p>
   </footer>
+
   <script src="script.js"></script>
 </body>
 </html>
