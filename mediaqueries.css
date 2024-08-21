@@ -101,3 +101,26 @@
     text-align: justify;
   }
 }
+
+@media screen and (max-width: 1200px) {
+  .article-container {
+    gap: 1rem; 
+  }
+
+  article {
+    width: auto; 
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .experience-sub-title {
+    font-size: 1.5rem;
+
+  .article-container {
+    gap: 1rem;
+  }
+
+  article {
+    width: 100%; 
+  }
+}

@@ -8,6 +8,88 @@
     <link rel="stylesheet" href="mediaqueries.css">
 </head>
 <body>
+  <div id="petals-container">
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+  </div>
     <nav id="desktop-nav">
         <div class="logo"><b>FALKERN</b></div>
         <div>
@@ -42,7 +124,7 @@
         <div class="section__text">
             <p class="section__text__p1">Hello, I'm</p>
             <h1 class="title">FALKERN</h1>
-            <p class="section__text__p2">Cybersecurity Student</p>
+            <p class="section__text__p2"><span id="animated-text" class="typing"></span></p>
             <div class="btn-container">
                 <button
                   class="btn btn-color-2"
@@ -50,7 +132,7 @@
                     >Resume
                 </button>
                 <button class="btn btn-color-1" onclick="location.href='./#contact'">
-                    Contact Info
+                    Hire Me
                 </button>
             </div>
         <div id="socials-container">
@@ -90,7 +172,7 @@
                     </div>
                 </div>
                 <div class="text-container">
-                    <p class="about-me-text">As a full-stack developer with over 3 years of experience, I create dynamic, secure web applications using modern technologies like React, Node.js, and PostgreSQL. With a strong focus on cybersecurity, I ensure that each project is built with best practices in mind, delivering both high performance and robust security.</p>
+                    <p class="about-me-text"><b>As a full-stack developer with over 3 years of experience, I create dynamic, secure web applications using modern technologies like React, Node.js, and PostgreSQL. With a strong focus on cybersecurity, I ensure that each project is built with best practices in mind, delivering both high performance and robust security.</b></p>
                 </div>
             </div>
         </div>
@@ -239,28 +321,43 @@
         <h1>Under Construction</h1>
       </div>   
     </section>
+
     <section id="contact">
-    <p class="section__text__p1">Get in Touch</p>
-    <h1 class="title">Contact Me</h1>
-    <div class="contact-info-upper-container">
-      <div class="contact-info-container">
-        <img
-          src="./assets/email.png"
-          alt="Email icon"
-          class="icon contact-icon email-icon"
-        />
-        <p><a href="mailto:silunwijenayake@gmail.com">Email</a></p>
+      <p class="section__text__p1">Get in Touch</p>
+      <h1 class="title">Contact Me</h1>
+      <div class="contact-info-upper-container">
+          <div class="contact-info-container">
+              <img src="./assets/email.png" alt="Email icon" class="icon contact-icon email-icon">
+              <p><a href="javascript:void(0);" onclick="copyEmail()">Email</a></p>
+          </div>
+          <div class="contact-info-container">
+              <img src="./assets/instagram.png" alt="Instagram icon" class="icon contact-icon">
+              <p><a href="https://www.instagram.com/kingfalkern/">Instagram</a></p>
+          </div>
       </div>
-      <div class="contact-info-container">
-        <img
-          src="./assets/linkedin.png"
-          alt="Linkedin icon"
-          class="icon contact-icon"
-        />
-        <p><a href="https://www.instagram.com/kingfalkern/">Linkedin</a></p>
-      </div>
-    </div>
+      <div id="popup" class="popup">Email copied to clipboard!</div>
   </section>
+  
+  <script>
+      function copyEmail() {
+          const email = "silunwijenayake@gmail.com";
+          navigator.clipboard.writeText(email).then(() => {
+              showPopup();
+          }).catch(err => {
+              console.error("Could not copy email: ", err);
+          });
+      }
+  
+      function showPopup() {
+          const popup = document.getElementById("popup");
+          popup.classList.add("show");
+          setTimeout(() => {
+              popup.classList.remove("show");
+          }, 2000); 
+      }
+  </script>
+  
+
   <footer>
     <nav>
       <div class="nav-links-container">
