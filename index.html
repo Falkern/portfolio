@@ -4,8 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
+    <link rel="icon" type="image/x-icon" href="./assets/anime_favicon.ico">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="mediaqueries.css">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 </head>
 <body>
   <div id="petals-container">
@@ -115,7 +118,7 @@
                 var musicToggleBtn = document.getElementById('music-toggle-btn');
                 var isMusicPlaying = false;
                 var music = document.getElementById('background-music');
-                music.volume = 0.05;
+                music.volume = 0.1;
             
                 function playMusic() {
                   music.currentTime = 0; 
@@ -175,7 +178,7 @@
                 <button
                   class="btn btn-color-2"
                   onclick="window.open('./assets/resume.pdf')"
-                    >Resume
+                    >Résumé
                 </button>
                 <button class="btn btn-color-1" onclick="location.href='./#contact'">
                     Hire Me
@@ -198,27 +201,27 @@
     </div>
     </section>
     <section id="about">
-        <p class="section__text__p1">Get To Know More</p>
-        <h1 class="title">About Me</h1>
+      <p class="section__text__p1" data-aos="fade-down" data-aos-duration="800" data-aos-easing="ease-in-out">Get To Know More</p>
+        <h1 class="title" data-aos="fade-down" data-aos-duration="700" data-aos-easing="ease-in-out">About Me</h1>
         <div class="section-container">
             <div class="section__pic-container">
-                <img src="./assets/about.jpg" alt="Profile picture" class="about-pic">
+              <img src="./assets/about.jpg" alt="About picture" class="about-pic" data-aos-duration="500" data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine">
             </div>
             <div class="about-details-container">
                 <div class="about-containers">
-                    <div class="details-container">
+                    <div class="details-container" data-aos-duration="600" data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine">
                         <img src="./assets/experience.png" alt="experience icon" class="icon">
                         <h3>Experience</h3>
                         <p>3+ years <br>Backend Development</p>
                     </div>
-                    <div class="details-container">
+                    <div class="details-container" data-aos-duration="700" data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine">
                         <img src="./assets/education.png" alt="education icon" class="icon">
                         <h3>Education</h3>
                         <p>Level 3 Diploma in Information Technology <br>Pearson BTEC Level 5 HND in Computing Cyber Security</p>
                     </div>
                 </div>
                 <div class="text-container">
-                    <p class="about-me-text"><b>As a full-stack developer with over 3 years of experience, I create dynamic, secure web applications using modern technologies like React, Node.js, and PostgreSQL. With a strong focus on cybersecurity, I ensure that each project is built with best practices in mind, delivering both high performance and robust security.</b></p>
+                    <p class="about-me-text" data-aos-duration="700" data-aos="fade-left" data-aos-easing="ease-in-sine"><b>As a full-stack developer with over 3 years of experience, I create dynamic, secure web applications using modern technologies like React, Node.js, and PostgreSQL. With a strong focus on cybersecurity, I ensure that each project is built with best practices in mind, delivering both high performance and robust security.</b></p>
                 </div>
             </div>
         </div>
@@ -402,8 +405,6 @@
           }, 2000); 
       }
   </script>
-  
-
   <footer>
     <nav>
       <div class="nav-links-container">

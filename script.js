@@ -76,7 +76,7 @@ function animatePetals() {
   for (var i = 0, len = petals.length; i < len; ++i) {
     var petal = petals[i];
     petal.innerHTML = '<div class="rotate"><img src="https://qqz.works/wp-content/uploads/2021/08/petal.png" class="askew"></div>';
-    var scale = Math.random() * 0.5 + 0.3; // Adjust size of the petals
+    var scale = Math.random() * 0.5 + 0.3; 
 
     var player = petal.animate([
       { 
@@ -88,9 +88,9 @@ function animatePetals() {
         opacity: 0 
       }
     ], {
-      duration: Math.random() * 20000 + 10000, // Adjust duration for smoother animation
+      duration: Math.random() * 20000 + 10000,
       iterations: Infinity,
-      delay: Math.random() * 5000 // Adjust delay
+      delay: Math.random() * 5000 
     });
 
     petalPlayers.push(player);
@@ -98,3 +98,10 @@ function animatePetals() {
 }
 
 animatePetals();
+
+document.addEventListener('DOMContentLoaded', function () {
+  AOS.init({
+      duration: 1000,
+      easing: 'ease-out',
+  });
+});

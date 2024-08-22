@@ -5,6 +5,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 html {
@@ -21,7 +22,7 @@ html {
   }
 
 p {
-  color: #9f263e;
+  color: #D94A58;
 }
 
 /* TRANSITION */
@@ -160,16 +161,23 @@ a {
 /* SECTIONS */
 
 section {
-  padding-top: 4vh;
-  height: 96vh;
-  margin: 0 10rem;
-  box-sizing: border-box;
-  min-height: fit-content;
+  padding: 2rem;
+  margin: 0 auto; 
+  max-width: 1200px;
 }
+
 
 .section-container {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
 }
+
+.container {
+  overflow: hidden;
+}
+
 
 /* PROFILE SECTION */
 
@@ -318,12 +326,29 @@ section {
 
 .about-pic {
   border-radius: 2rem;
+  border: #E19A9C 0.2rem solid;
 }
 
 .arrow {
   position: absolute;
   right: -5rem;
   bottom: 2.5rem;
+}
+
+#about .details-container {
+  padding: 1.5rem;
+  flex: 1;
+  background: #FAD4D8 !important;
+  border-radius: 2rem;
+  border: #E19A9C 0.2rem solid;
+  text-align: center;
+  color: #D94A58 !important;
+  flex: 1;
+  text-align: center;
+}
+
+#about .icon {
+  padding: 0.5px;
 }
 
 .details-container {
@@ -405,22 +430,6 @@ article .icon {
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
-  opacity: 0;
-  transition: opacity 1s ease-out;
-}
-
-.fade-in {
-  opacity: 1;
-  animation: reveal 1s both linear;
-}
-
-@keyframes reveal {
-  from {
-    background-position-x: 200%;
-  }
-  to {
-    background-position-x: 0%;
-  }
 }
 
 .project-under-con {
@@ -663,7 +672,7 @@ footer p {
 /* AUDIO */
 
 .music-icon {
-  width: 2rem; 
+  width: 3rem; 
   height: auto;
   cursor: pointer;
   transition: opacity 300ms ease;
@@ -672,3 +681,4 @@ footer p {
 .music-icon:hover {
   opacity: 0.8;
 }
+
