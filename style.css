@@ -188,6 +188,10 @@ section {
   height: 80vh;
 }
 
+#profile .icon {
+  padding: 1px;
+}
+
 .section__pic-container {
   display: flex;
   height: 400px;
