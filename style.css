@@ -37,6 +37,7 @@ a,
 nav,
 .nav-links {
   display: flex;
+  font-weight: 500;
 }
 
 nav {
@@ -676,7 +677,7 @@ footer p {
 /* AUDIO */
 
 .music-icon {
-  width: 3rem; 
+  width: 4rem; 
   height: auto;
   cursor: pointer;
   transition: opacity 300ms ease;
