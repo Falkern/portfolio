@@ -24,7 +24,7 @@ elements.forEach(element => {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
-  const texts = ["Cybersecurity Student", "Web Developer", "Software Developer", "Web Designer", "Backend Developer", "Frontend Developer"];
+  const texts = ["Cybersecurity Student", "Web Developer", "Software Developer", "Web Designer", "Reverse Engineer", "Backend Developer", "Frontend Developer"];
   let count = 0;
   let index = 0;
   let currentText = "";
