@@ -105,3 +105,28 @@ document.addEventListener('DOMContentLoaded', function () {
       easing: 'ease-out',
   });
 });
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  const toggleButton = document.getElementById("dark-mode-toggle");
+  
+  toggleButton.addEventListener("click", function () {
+    document.body.classList.toggle("dark-mode");
+    
+    // Update the button icon/text
+    const isDarkMode = document.body.classList.contains("dark-mode");
+    toggleButton.textContent = isDarkMode ? "☀️" : "🌙";
+    
+    // Save the user's preference in localStorage
+    localStorage.setItem("dark-mode", isDarkMode);
+  });
+
+  // Load the user's preference from localStorage
+  const savedDarkMode = localStorage.getItem("dark-mode") === "true";
+  if (savedDarkMode) {
+    document.body.classList.add("dark-mode");
+    toggleButton.textContent = "☀️";
+  } else {
+    toggleButton.textContent = "🌙";
+  }
+});
