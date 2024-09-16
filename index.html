@@ -11,7 +11,7 @@
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 </head>
 <body>
-  <div id="petals-container">
+<div id="petals-container">
     <div class="petal"></div>
     <div class="petal"></div>
     <div class="petal"></div>
@@ -92,347 +92,306 @@
     <div class="petal"></div>
     <div class="petal"></div>
     <div class="petal"></div>
-  </div>
-    <nav id="desktop-nav">
-        <div class="logo"><b>FALKERN</b></div>
-        <div>
+</div>
+<nav id="desktop-nav">
+    <div class="logo"><b>FALKERN</b></div>
+    <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li>
+            <img id="music-toggle-btn" src="./assets/music.png" alt="Toggle Music" class="music-icon">
+        </li>
+        <li>
+            <button id="dark-mode-toggle" aria-label="Toggle Dark Mode">🌙</button>
+        </li>
+    </ul>
+</nav>
+
+<nav id="hamburger-nav">
+    <div class="logo"><b>FALKERN</b></div>
+    <div class="hamburger-menu">
+        <button id="hamburger-icon" aria-expanded="false" aria-controls="menu-links">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul id="menu-links" class="menu-links" aria-hidden="true">
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contacts</a></li>
+        </ul>
+    </div>
+</nav>
+
+<script>
+    document.getElementById('hamburger-icon').addEventListener('click', function() {
+        const menuLinks = document.getElementById('menu-links');
+        const isExpanded = this.getAttribute('aria-expanded') === 'true';
+        this.setAttribute('aria-expanded', !isExpanded ? 'true' : 'false');
+        menuLinks.setAttribute('aria-hidden', isExpanded ? 'true' : 'false');
+        toggleMenu();
+    });
+
+    document.querySelectorAll('#menu-links a').forEach(link => {
+        link.addEventListener('click', toggleMenu);
+    });
+
+    function toggleMenu() {
+        const menuLinks = document.getElementById('menu-links');
+        menuLinks.classList.toggle('active');
+    }
+</script>
+
+<section id="profile">
+    <div class="section__pic-container">
+        <img src="./assets/eren pfp.png" alt="FALKERN profile picture">
+    </div>
+    <div class="section__text">
+        <p class="section__text__p1">Hello, I'm</p>
+        <h1 class="title">FALKERN</h1>
+        <p class="section__text__p2"><span id="animated-text" class="typing"></span></p>
+        <div class="btn-container">
+            <button class="btn btn-color-2" onclick="window.open('./assets/resume.pdf')">Résumé</button>
+            <button class="btn btn-color-1" onclick="location.href='./#contact'">Hire Me</button>
+        </div>
+        <div id="socials-container">
+            <img src="./assets/instagram.png" alt="My Instagram profile" class="icon" onclick="location.href='https://www.instagram.com/kingfalkern/'" />
+            <img src="./assets/github.png" alt="My Github profile" class="icon" onclick="location.href='https://github.com/Falkern'" />
+        </div>
+    </div>
+</section>
+
+<section id="about">
+    <p class="section__text__p1" data-aos="fade-down" data-aos-duration="800" data-aos-easing="ease-in-out">Get To Know More</p>
+    <h1 class="title" data-aos="fade-down" data-aos-duration="700" data-aos-easing="ease-in-out">About Me</h1>
+    <div class="section-container">
+        <div class="section__pic-container">
+            <img src="./assets/about.jpg" alt="About picture" class="about-pic" data-aos-duration="500" data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-delay="100">
+        </div>
+        <div class="about-details-container">
+            <div class="about-containers">
+                <div class="details-container" data-aos-duration="500" data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine">
+                    <img src="./assets/experience.png" alt="experience icon" class="icon">
+                    <h3>Experience</h3>
+                    <p>3+ years <br>Backend Development</p>
+                </div>
+                <div class="details-container" data-aos-duration="400" data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-delay="100">
+                    <img src="./assets/education.png" alt="education icon" class="icon">
+                    <h3>Education</h3>
+                    <p>Level 3 Diploma in Information Technology <br>Pearson BTEC Level 5 HND in Computing CyberSecurity</p>
+                </div>
+            </div>
+            <div class="text-container">
+                <p class="about-me-text" data-aos-duration="500" data-aos="fade-in" data-aos-easing="ease-in-sine" data-aos-delay="100"><b>As a full-stack developer with over 3 years of experience, I create dynamic, secure web applications using modern technologies like React, Node.js, and PostgreSQL. With a strong focus on cybersecurity, I ensure that each project is built with best practices in mind, delivering both high performance and robust security.</b></p>
+            </div>
+        </div>
+    </div>
+    <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#experience'" />
+</section>
+
+<section id="experience">
+    <p class="section__text__p1">Explore My</p>
+    <h1 class="title">Experience</h1>
+    <div class="experience-details-container">
+        <div class="about-containers">
+            <div class="details-container">
+                <h2 class="experience-sub-title">Frontend Development</h2>
+                <div class="article-container">
+                    <article>
+                        <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+                        <div>
+                            <h3>HTML</h3>
+                            <p>Experienced</p>
+                        </div>
+                    </article>
+                    <article>
+                        <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+                        <div>
+                            <h3>CSS</h3>
+                            <p>Experienced</p>
+                        </div>
+                    </article>
+                    <article>
+                        <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+                        <div>
+                            <h3>SASS</h3>
+                            <p>Intermediate</p>
+                        </div>
+                    </article>
+                    <article>
+                        <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+                        <div>
+                            <h3>JavaScript</h3>
+                            <p>Basic</p>
+                        </div>
+                    </article>
+                    <article>
+                        <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+                        <div>
+                            <h3>TypeScript</h3>
+                            <p>Basic</p>
+                        </div>
+                    </article>
+                    <article>
+                        <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+                        <div>
+                            <h3>Material UI</h3>
+                            <p>Basic</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+            <div class="details-container">
+                <h2 class="experience-sub-title">Backend Development</h2>
+                <div class="article-container">
+                    <article>
+                        <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+                        <div>
+                            <h3>PostgreSQL</h3>
+                            <p>Basic</p>
+                        </div>
+                    </article>
+                    <article>
+                        <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+                        <div>
+                            <h3>Node JS</h3>
+                            <p>Intermediate</p>
+                        </div>
+                    </article>
+                    <article>
+                        <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+                        <div>
+                            <h3>Express JS</h3>
+                            <p>Intermediate</p>
+                        </div>
+                    </article>
+                    <article>
+                        <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+                        <div>
+                            <h3>Python</h3>
+                            <p>Intermediate</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </div>
+    <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#projects'" />
+</section>
+
+<section id="skills">
+    <h2 class="section-title">Skills</h2>
+    <div class="skills-container">
+        <div class="skill-badge" data-skill="Experienced">HTML</div>
+        <div class="skill-badge" data-skill="Experienced">CSS</div>
+        <div class="skill-badge" data-skill="Intermediate">JavaScript</div>
+        <div class="skill-badge" data-skill="Basic">React</div>
+        <div class="skill-badge" data-skill="Basic">Node.js</div>
+        <div class="skill-badge" data-skill="Experienced">Python</div>
+        <div class="skill-badge" data-skill="Experienced">Tailwind CSS</div>
+    </div>
+</section>
+
+<section id="projects">
+    <div class="under-con">
+        <p class="section__text__p1">Browse My Recent</p>
+        <h1 class="title">Projects</h1>
+    </div>
+    <div class="project-under-con">
+        <h1>Under Construction</h1>
+    </div>
+</section>
+
+<section id="contact">
+    <p class="section__text__p1">Get in Touch</p>
+    <h1 class="title">Contact Me</h1>
+    <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+            <img src="./assets/email.png" alt="Email icon" class="icon contact-icon email-icon">
+            <p><a href="javascript:void(0);" onclick="copyEmail()">Email</a></p>
+        </div>
+        <div class="contact-info-container">
+            <img src="./assets/instagram.png" alt="Instagram icon" class="icon contact-icon">
+            <p><a href="https://www.instagram.com/kingfalkern/">Instagram</a></p>
+        </div>
+    </div>
+    <div id="popup" class="popup">Email copied to clipboard!</div>
+</section>
+
+<footer>
+    <nav>
+        <div class="nav-links-container">
             <ul class="nav-links">
                 <li><a href="#about">About</a></li>
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
-                <li>
-                  <img id="music-toggle-btn" src="./assets/music.png" alt="Toggle Music" class="music-icon">
-                </li>
-                <li><button id="dark-mode-toggle" aria-label="Toggle Dark Mode">🌙</button>
-                </li>
-              </ul>
-            </nav>
-          
-            <audio id="background-music" preload="auto" loop>
-              <source src="./assets/kaze.mp3" type="audio/mpeg">
-              Your browser does not support the audio element.
-            </audio>
-
-            <script>
-              document.addEventListener('DOMContentLoaded', function() {
-                var music = document.getElementById('background-music');
-                var musicToggleBtn = document.getElementById('music-toggle-btn');
-                var isMusicPlaying = false;
-                var music = document.getElementById('background-music');
-                music.volume = 0.1;
-            
-                function playMusic() {
-                  music.currentTime = 0; 
-                  music.play().then(() => {
-                    isMusicPlaying = true;
-                    musicToggleBtn.src = './assets/pause.png'; 
-                  }).catch(function(error) {
-                    console.log('Autoplay was prevented or failed:', error);
-                  });
-                }
-            
-                function toggleMusic() {
-                  if (isMusicPlaying) {
-                    music.pause();
-                    musicToggleBtn.src = './assets/music.png';
-                  } else {
-                    playMusic();
-                  }
-                  isMusicPlaying = !isMusicPlaying;
-                }
-            
-                musicToggleBtn.addEventListener('click', toggleMusic);
-            
-                playMusic();
-              });
-            </script>
-            
-            
             </ul>
         </div>
     </nav>
-    <nav id="hamburger-nav">
-        <div class="logo"><b>FALKERN</b></div>
-        <div class="hamburger-menu">
-            <div class="hamburger-icon" onclick="toggleMenu()">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <div class="menu-links">
-                <li><a href="#about" onclick="toggleMenu()">About</a></li>
-                <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
-                <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-                <li><a href="#contact" onclick="toggleMenu()">Contacts</a></li>
-            </div>
-        </div>    
-    </nav>
-    <section id="profile">
-        <div class="section__pic-container">
-            <img src="./assets/eren pfp.png" alt="FALKERN profile picture">
-        </div>
-        <div class="section__text">
-            <p class="section__text__p1">Hello, I'm</p>
-            <h1 class="title">FALKERN</h1>
-            <p class="section__text__p2"><span id="animated-text" class="typing"></span></p>
-            <div class="btn-container">
-                <button
-                  class="btn btn-color-2"
-                  onclick="window.open('./assets/resume.pdf')"
-                    >Résumé
-                </button>
-                <button class="btn btn-color-1" onclick="location.href='./#contact'">
-                    Hire Me
-                </button>
-            </div>
-        <div id="socials-container">
-          <img
-            src="./assets/instagram.png"
-            alt="My Instagram profile"
-            class="icon"
-            onclick="location.href='https://www.instagram.com/kingfalkern/'"
-          />
-          <img
-            src="./assets/github.png"
-            alt="My Github profile"
-            class="icon"
-            onclick="location.href='https://github.com/Falkern'"
-          />
-        </div>
-    </div>
-    </section>
-    <section id="about">
-      <p class="section__text__p1" data-aos="fade-down" data-aos-duration="800" data-aos-easing="ease-in-out">Get To Know More</p>
-        <h1 class="title" data-aos="fade-down" data-aos-duration="700" data-aos-easing="ease-in-out">About Me</h1>
-        <div class="section-container">
-            <div class="section__pic-container">
-              <img src="./assets/about.jpg" alt="About picture" class="about-pic" data-aos-duration="500" data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-delay="100">
-            </div>
-            <div class="about-details-container">
-                <div class="about-containers">
-                    <div class="details-container" data-aos-duration="500" data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine">
-                        <img src="./assets/experience.png" alt="experience icon" class="icon">
-                        <h3>Experience</h3>
-                        <p>3+ years <br>Backend Development</p>
-                    </div>
-                    <div class="details-container" data-aos-duration="400" data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-delay="100">
-                        <img src="./assets/education.png" alt="education icon" class="icon">
-                        <h3>Education</h3>
-                        <p>Level 3 Diploma in Information Technology <br>Pearson BTEC Level 5 HND in Computing Cyber Security</p>
-                    </div>
-                </div>
-                <div class="text-container">
-                    <p class="about-me-text" data-aos-duration="500" data-aos="fade-in" data-aos-easing="ease-in-sine" data-aos-delay="100"><b>As a full-stack developer with over 3 years of experience, I create dynamic, secure web applications using modern technologies like React, Node.js, and PostgreSQL. With a strong focus on cybersecurity, I ensure that each project is built with best practices in mind, delivering both high performance and robust security.</b></p>
-                </div>
-            </div>
-        </div>
-        <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#experience'"/>
-    </section>
-       </section>
-    <section id="experience">
-      <p class="section__text__p1">Explore My</p>
-      <h1 class="title">Experience</h1>
-      <div class="experience-details-container">
-        <div class="about-containers">
-          <div class="details-container">
-            <h2 class="experience-sub-title">Frontend Development</h2>
-            <div class="article-container">
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>HTML</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>CSS</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>SASS</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>JavaScript</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>TypeScript</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Material UI</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-            </div>
-          </div>      
-          <div class="details-container">
-            <h2 class="experience-sub-title">Backend Development</h2>
-            <div class="article-container">
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>PostgreSQL</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Node JS</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Express JS</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Python</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-            </div>
-          </div>
-        </div>
-      </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#projects'"/>
-    </section>
-      <section id="skills">
-        <h2 class="section-title">Skills</h2>
-        <div class="skills-container">
-          <div class="skill-badge" data-skill="Experienced">HTML</div>
-          <div class="skill-badge" data-skill="Experienced">CSS</div>
-          <div class="skill-badge" data-skill="Intermediate">JavaScript</div>
-          <div class="skill-badge" data-skill="Basic">React</div>
-          <div class="skill-badge" data-skill="Basic">Node.js</div>
-          <div class="skill-badge" data-skill="Experienced">Python</div> 
-          <div class="skill-badge" data-skill="Experienced">Tailwind CSS</div>
-        </div>
-      </section>
-    <section id="projects">
-      <div class="under-con">
-        <p class="section__text__p1">Browse My Recent</p>
-        <h1 class="title">Projects</h1>
-      </div>
-      <div class="project-under-con">
-        <h1>Under Construction</h1>
-      </div>   
-    </section>
-    
-    <section id="contact">
-      <p class="section__text__p1">Get in Touch</p>
-      <h1 class="title">Contact Me</h1>
-      <div class="contact-info-upper-container">
-          <div class="contact-info-container">
-              <img src="./assets/email.png" alt="Email icon" class="icon contact-icon email-icon">
-              <p><a href="javascript:void(0);" onclick="copyEmail()">Email</a></p>
-          </div>
-          <div class="contact-info-container">
-              <img src="./assets/instagram.png" alt="Instagram icon" class="icon contact-icon">
-              <p><a href="https://www.instagram.com/kingfalkern/">Instagram</a></p>
-          </div>
-      </div>
-      <div id="popup" class="popup">Email copied to clipboard!</div>
-  </section>
-  
-  <script>
-      function copyEmail() {
-          const email = "silunwijenayake@gmail.com";
-          navigator.clipboard.writeText(email).then(() => {
-              showPopup();
-          }).catch(err => {
-              console.error("Could not copy email: ", err);
-          });
-      }
-  
-      function showPopup() {
-          const popup = document.getElementById("popup");
-          popup.classList.add("show");
-          setTimeout(() => {
-              popup.classList.remove("show");
-          }, 2000); 
-      }
-  </script>
-  <footer>
-    <nav>
-      <div class="nav-links-container">
-        <ul class="nav-links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </div>
-    </nav>
     <p>Copyright &#169; 2024 FALKERN. All Rights Reserved.</p>
-  </footer>
+</footer>
 
-  <script src="script.js"></script>
+<audio id="background-music" preload="auto" loop>
+    <source src="./assets/kaze.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+</audio>
+
+<script>
+    document.addEventListener('DOMContentLoaded',
+        function () {
+            const music = document.getElementById('background-music');
+            const musicToggleBtn = document.getElementById('music-toggle-btn');
+            let isMusicPlaying = false;
+
+            music.volume = 0.1;
+
+            function playMusic() {
+                music.currentTime = 0;
+                music.play().then(() => {
+                    isMusicPlaying = true;
+                    musicToggleBtn.src = './assets/pause.png';
+                }).catch(function (error) {
+                    console.log('Autoplay was prevented or failed:', error);
+                });
+            }
+
+            function toggleMusic() {
+                if (isMusicPlaying) {
+                    music.pause();
+                    musicToggleBtn.src = './assets/music.png';
+                } else {
+                    playMusic();
+                }
+                isMusicPlaying = !isMusicPlaying;
+            }
+
+            musicToggleBtn.addEventListener('click', toggleMusic);
+
+            playMusic();
+        });
+
+    function copyEmail() {
+        const email = "silunwijenayake@gmail.com";
+        navigator.clipboard.writeText(email).then(() => {
+            showPopup();
+        }).catch(err => {
+            console.error("Could not copy email: ", err);
+        });
+    }
+
+    function showPopup() {
+        const popup = document.getElementById("popup");
+        popup.classList.add("show");
+        setTimeout(() => {
+            popup.classList.remove("show");
+        }, 2000);
+    }
+</script>
+
+<script src="script.js"></script>
 </body>
 </html>

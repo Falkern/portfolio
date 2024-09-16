@@ -19,13 +19,13 @@ body {
 
 /* Dark mode styles */
 body.dark-mode {
-  background-color: #121212; 
+  background-color: #121212;
   color: #e0e0e0;
 }
 
-body.dark-mode p, 
+body.dark-mode p,
 body.dark-mode a {
-  color: #e0e0e0; 
+  color: #e0e0e0;
 }
 
 body.dark-mode .btn-color-1,
@@ -54,21 +54,21 @@ body.dark-mode .logo {
 }
 
 body.dark-mode .menu-links {
-  background-color: #1e1e1e; 
+  background-color: #1e1e1e;
 }
 
 body.dark-mode .menu-links a {
-  color: #e0e0e0; 
+  color: #e0e0e0;
 }
 
 body.dark-mode .about-pic,
 body.dark-mode .details-container {
-  border: #333 0.2rem solid; 
-  background: #1e1e1e; 
+  border: #333 0.2rem solid;
+  background: #1e1e1e;
 }
 
 body.dark-mode footer {
-  background-color: #1e1e1e; 
+  background-color: #1e1e1e;
   color: #e0e0e0;
 }
 
@@ -82,21 +82,20 @@ body.dark-mode .music-icon {
 }
 
 body.dark-mode #petals-container {
-  color: rgba(255, 255, 255, 0.5); 
+  color: rgba(255, 255, 255, 0.5);
 }
 
 body.dark-mode .logo {
-  background: linear-gradient(90deg, #9f263e, #ff6f61); 
+  background: linear-gradient(90deg, #9f263e, #ff6f61);
   color: transparent;
   background-size: 100%;
-  background-repeat: no-repeat;
   background-clip: text;
   -webkit-background-clip: text;
 }
 
 html {
-    scroll-behavior: smooth;
-  }
+  scroll-behavior: smooth;
+}
 
 p {
   color: #D94A58;
@@ -130,117 +129,116 @@ nav {
 }
 
 a {
-    color: #9f263e;
-    text-decoration: none;
-    text-decoration-color: white;
-  }
-  
-  a:hover {
-    color: #ff6f61;
-    text-decoration: underline;
-    text-underline-offset: 1rem;
-    text-decoration-color: #ff6f61;
-  }
-  
-  .logo {
-    font-size: 2rem;
-    background: linear-gradient(90deg, #9f263e, #ff6f61);
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-  }
-  
-  .logo:hover {
-    cursor: default;
-  }
-  
+  color: #9f263e;
+  text-decoration: none;
+  text-decoration-color: white;
+}
+
+a:hover {
+  color: #ff6f61;
+  text-decoration: underline;
+  text-underline-offset: 1rem;
+  text-decoration-color: #ff6f61;
+}
+
+.logo {
+  font-size: 2rem;
+  background: linear-gradient(90deg, #9f263e, #ff6f61);
+  background-size: 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.logo:hover {
+  cursor: default;
+}
+
 /* HAMBURGER MENU */
 
 #hamburger-nav {
-    display: none;
-  }
-  
-  .hamburger-menu {
-    position: relative;
-    display: inline-block;
-  }
-  
-  .hamburger-icon {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 24px;
-    width: 30px;
-    cursor: pointer;
-  }
-  
-  .hamburger-icon span {
-    width: 100%;
-    height: 2px;
-    background-color: #9f263e;
-    transition: all 0.3 ease-in-out;
-  }
-  
-  .menu-links {
-    position: absolute;
-    top: 100%;
-    right: 0;
-    background-color: #fedde3;
-    width: fit-content;
-    max-height: 0;
-    overflow: hidden;
-    transition: all 0.3 ease-in-out;
-  }
-  
-  .menu-links a {
-    display: block;
-    padding: 10px;
-    text-align: center;
-    font-size: 1.5rem;
-    color: #9f263e;
-    text-decoration: none;
-    transition: all 0.3 ease-in-out;
-  }
-  
-  .menu-links li {
-    list-style: none;
-  }
-  
-  .menu-links.open {
-    max-height: 300px;
-  }
-  
-  .hamburger-icon.open span:first-child {
-    transform: rotate(45deg) translate(10px, 5px);
-  }
-  
-  .hamburger-icon.open span:nth-child(2) {
-    opacity: 0;
-  }
-  
-  .hamburger-icon.open span:last-child {
-    transform: rotate(-45deg) translate(10px, -5px);
-  }
-  
-  .hamburger-icon span:first-child {
-    transform: none;
-  }
-  
-  .hamburger-icon span:first-child {
-    opacity: 1;
-  }
-  
-  .hamburger-icon span:first-child {
-    transform: none;
-  }
-  
+  display: none;
+}
+
+.hamburger-menu {
+  position: relative;
+  display: inline-block;
+}
+
+.hamburger-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 24px;
+  width: 30px;
+  cursor: pointer;
+}
+
+.hamburger-icon span {
+  width: 100%;
+  height: 2px;
+  background-color: #9f263e;
+  transition: all 0.3s ease-in-out;
+}
+
+.menu-links {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #fedde3;
+  width: fit-content;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+.menu-links a {
+  display: block;
+  padding: 10px;
+  text-align: center;
+  font-size: 1.5rem;
+  color: #9f263e;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.menu-links li {
+  list-style: none;
+}
+
+.menu-links.open {
+  max-height: 300px;
+}
+
+.hamburger-icon.open span:first-child {
+  transform: rotate(45deg) translate(10px, 5px);
+}
+
+.hamburger-icon.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-icon.open span:last-child {
+  transform: rotate(-45deg) translate(10px, -5px);
+}
+
+.hamburger-icon span:first-child {
+  transform: none;
+}
+
+.hamburger-icon span:first-child {
+  opacity: 1;
+}
+
+.hamburger-icon span:first-child {
+  transform: none;
+}
+
 /* SECTIONS */
 
 section {
   padding: 2rem;
-  margin: 0 auto; 
+  margin: 0 auto;
   max-width: 1200px;
 }
 
@@ -420,17 +418,15 @@ section {
 #about .details-container {
   padding: 1.5rem;
   flex: 1;
-  background: #FAD4D8 !important;
+  background: #FAD4D8;
   border-radius: 2rem;
   border: #E19A9C 0.2rem solid;
   text-align: center;
-  color: #D94A58 !important;
-  flex: 1;
-  text-align: center;
+  color: #D94A58;
 }
 
 #about .icon {
-  padding: 0.5px;
+  padding: 1px;
 }
 
 .details-container {
@@ -441,16 +437,15 @@ section {
   border: #9f263e 0.1rem solid;
   text-align: center;
   color: #9f263e !important;
-  flex: 1
 }
 
 section {
   padding: 2vh 2rem;
-  margin: 0 auto; 
+  margin: 0 auto;
 }
 
 .details-container {
-  margin: 1rem; 
+  margin: 1rem;
 }
 
 .section-container {
@@ -508,7 +503,6 @@ article .icon {
 .section__text__p1, .title, .about-pic, .details-container, .about-me-text {
   background: linear-gradient(90deg, #9f263e, #ff6f61);
   background-size: 200%;
-  background-repeat: no-repeat;
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
@@ -519,10 +513,8 @@ article .icon {
   padding: 1.5rem;
   flex: 1;
   background: white;
+  border: 0.1rem solid #9f263e;
   border-radius: 2rem;
-  border: #000 0.1rem solid;
-  border-color: #9f263e;
-  text-align: center;
   color: #9f263e;
 }
 
@@ -537,8 +529,7 @@ article .icon {
   display: flex;
   justify-content: center;
   border-radius: 2rem;
-  border: #000 0.1rem solid;
-  border-color: #9f263e;
+  border: #9f263e 0.1rem solid;
   background: #fff;
   margin: 2rem auto;
   padding: 0.5rem;
@@ -579,13 +570,11 @@ footer p {
 
 .typing {
   font-weight: 600;
-  border-right: 0.1em solid #000; 
+  border-right: 0.1em solid #000;
   background: linear-gradient(90deg, #9f263e, #ff6f61);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-weight: bold;
 }
 
 @keyframes blink-caret {
@@ -624,34 +613,34 @@ footer p {
   left: 0;
   width: 100%;
   height: 100%;
-  pointer-events: none; 
+  pointer-events: none;
   overflow: hidden;
   z-index: -1;
 }
 
 .petal {
-  width: 2rem; 
+  width: 2rem;
   height: 2rem;
   display: inline-block;
   position: absolute;
-  top: -5rem; 
+  top: -5rem;
   left: 0;
   z-index: 0;
 }
 
 .petal .rotate {
   animation: driftyRotate 1s infinite both ease-in-out;
-  perspective: 1000;
+  perspective: 1000px;
 }
 
 .petal .askew {
   background: currentColor;
   transform: skewY(10deg);
   display: block;
-  width: 2rem; 
-  height: 2rem; 
+  width: 2rem;
+  height: 2rem;
   animation: drifty 1s infinite alternate both ease-in-out;
-  perspective: 1000;
+  perspective: 1000px;
 }
 
 .petal {
@@ -754,7 +743,7 @@ footer p {
 /* AUDIO */
 
 .music-icon {
-  width: 4rem; 
+  width: 4rem;
   height: auto;
   cursor: pointer;
   transition: opacity 300ms ease;
@@ -768,7 +757,7 @@ footer p {
 
 #skills {
   padding: 2rem;
-  background-color: none;
+  background-color: transparent;
   color: #fff;
   text-align: center;
 }
