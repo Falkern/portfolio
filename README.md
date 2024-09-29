@@ -1,3 +1,3 @@
-# im trying ok
+# old portfolio
 
-prolly gonna implement [vue](https://github.com/vuejs)
+made new one instead 
